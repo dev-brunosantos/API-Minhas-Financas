@@ -4,9 +4,9 @@ const EntradasRoutes = Router();
 
 EntradasRoutes
     .get('/entradas', EntradasControllers.Todas)
-    .get('/entradas/nome', EntradasControllers.FiltrarNome)
-
+    
     .post('/entradas/nova', EntradasControllers.NovaEntrada)
+    .post('/entradas/nome', EntradasControllers.FiltrarNome)
 
     .put('/entradas/editar/:id', EntradasControllers.EditarEntrada)
 
