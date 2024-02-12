@@ -5,17 +5,21 @@ const routes = require('./routes')
 
 const app = express()
 
-app.set('view engine', 'pug')
-app.set('views', './views')
+// app.set('view engine', 'pug')
+// app.set('views', './views')
+// app.use(express.static(__dirname+'/public'))
 
-app.use(express.static(__dirname+'/public'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cors())
 app.use(routes)
 
+// app.get('/', (req, res) => {
+//     res.render('index')
+// })
+
 app.get('/', (req, res) => {
-    res.render('index')
+    res.send('Bem vindo a API MINHAS FINANÇAS')
 })
 
 module.exports = app
